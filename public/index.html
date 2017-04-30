@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/enc-base64.js"></script>
+	<script src="js/x64-core.js"></script>
+	<script src="js/lib-typedarrays.js"></script>
+	<script src="js/cipher-core.js"></script>
+	<script src="js/aes.js"></script>
+	<script src='js/chat.js'></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于node.js的聊天页面</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/buttons.css">
+	<!--[if IE]>
+		<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="bg"></div>
+	<div id='chat' style="display: none" class="phone">
+		<div class="screen">
+			<h1 id='ks' class="hello">Welcome!
+			</h1>
+			<h1 id='a' class='user'>
+				密文
+				<p style="margin-top:20px">点歌</p>
+			</h1>
+			<h1 id='b' class='chat'>
+				返回
+			</h1>
+			<h1 id='c' class='clean'>
+				清屏
+			</h1>
+			<div class="nav">
+				<a class="home" href="#">
+					<img class="open" src="img/menu.svg" title="Menu" width="30">
+					<img class="close" src="img/close.svg" title="Close" width="30">
+				</a>
+				<a class="item profile" href="#" onclick="gr()"><img src="img/user.svg" alt="User" width="25"></a>
+				<a class="item like" href="#" onclick="mc()"><img src="img/heart.svg" alt="Like" width="25"></a>
+				<a class="item message" href="#" onclick="hf()"><img src="img/message.svg" alt="Message" width="25"></a>
+				<a class="item tools" href="#" onclick="clean()"><img src="img/tools.svg" title="Tools" width="25"></a>
+			</div>
+			<br/>
+			<br/>
+			<br/>
+			<h3 id='js'></h3>
+			<div id='jm'></div>
+			<form id="form">
+				<p id='me' style="color: red">用户名: 当前在线人数：
+					<p>
+						<input type="text" maxlength="16" id="input" />
+						<button class="button button-glow button-border button-rounded button-primary">Send</button>
+						<!-- <button>Send</button> -->
+			</form>
+			<ul id='messages'>
+			</ul>
+			<div id='music' class='footer'>
+			</div>
+			<ul style='display:none' id='songs'>
+			</ul>
+		</div>
+		<!-- .screen -->
+	</div>
+	<!-- .phone -->
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+	<script src='js/TweenMax.min.js'></script>
+	<script src='js/inner.js'></script>
+	<!-- 		<script src="js/decrypt&encrypt.js"></script> -->
+</body>
+
+</html>

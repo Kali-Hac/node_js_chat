@@ -1,0 +1,194 @@
+body {
+  background: #2AB2DB;
+  padding: 0;
+  margin: 0;
+}
+body * {
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.bg {
+	position: fixed;
+	background: red;
+	width: 100%;
+	height: 100%;
+	background: #29b3db; /* Old browsers */
+	background: -moz-linear-gradient(top,  #29b3db 0%, #9a5ae8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #29b3db 0%,#9a5ae8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #29b3db 0%,#9a5ae8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29b3db', endColorstr='#9a5ae8',GradientType=0 ); /* IE6-9 */
+}
+.phone {
+  visibility: hidden;
+  background-color: #524662;    
+  width: 320px;
+  height: 480px;
+  padding: 64px 12px 64px;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -172px;
+  margin-top: -304px;
+}
+.phone:after {
+  content: " ";
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #41354F;
+  display: table;
+  position: absolute;
+  left: 50%;
+  margin-left: -21px;
+  margin-top: 10px;
+}
+.phone:before {
+  content: " ";
+  width: 64px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #41354F;
+  display: table;
+  position: absolute;
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -35px;
+}
+.screen {
+  background: url(../img/background.svg);
+  background-size: cover;
+  width: 320px;
+  height: 480px;
+}
+.nav {
+  position: relative;
+  top: 12px;
+  left: 12px;
+}
+.nav a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+}
+.nav a img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav a.home {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+.nav a.home img {	
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav a.profile { 
+  position: absolute;
+  left: 113px;
+  top: -5px;
+}
+.nav a.like {
+  position: absolute;
+  left: 115px;
+  top: 59px;
+}
+.nav a.message {
+  position: absolute;
+  left: 65px;
+  top: 106px;
+}
+.nav a.tools {  
+  position: absolute;
+  top: 114px;
+  left: 0;
+}
+.home:not(.active) .close, .home.active .open {
+  display: none;
+}
+.home.active .close, .home:not(.active) .open {
+  display: block;
+}
+h1.hello {
+  position: absolute;
+  top: 10px;
+  left: 60%;
+  transform: translateX(-50%);
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+h1.user {
+  position: absolute;
+  margin-top: 35px;
+  left: 240px;
+  transform: translateX(-50%);
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+  display: none;
+}
+h1.chat {
+  display:none;
+  position: absolute;
+  margin-top: 170px;
+  left: 170px;
+  transform: translateX(-50%);
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+h1.clean{
+  display: none;
+  position: absolute;
+  margin-top: 204px;
+  left: 50px;
+  transform: translateX(-50%);
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .phone {	
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  .phone:before, .phone:after {
+    content: "";
+    display: none;
+  }
+  .screen {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
+.footer{
+  display: none;
+  position: absolute;
+  margin-top:345px;
+  left: 7px;
+}
